@@ -1,44 +1,70 @@
-# OttonovaChallenge
-Project Overview:
-The project's primary goal is to retrieve JSON data of multiple cities from the backend and display it on the frontend. It's divided into two main parts:
-1.	Server Side (Backend):
-      •	The server side is built using Express.js.
-      •	Its main function is to provide JSON data containing detailed city information.
-      •	The server project's structure includes:
-      •	data: Contains city data and related information.
-      •	routes: Defines routes for fetching city information.
-      •	The server.js file initializes and configures the Express server to only accept GET requests and launches it on port 3001.
-      •	Authentication is implemented using a token-based protocol in the routes.js file within the routes folder. Invalid token requests are rejected, ensuring data security.
-      •	The ‘/cities’ route, defined in the cities.js file, retrieves city information.
-      •	To set up and run the server project:
-        o	npm install 
-        o	npm start 
-      •	Required packages:
-        •	cors: Enables Cross-Origin Resource Sharing (CORS) in Express.js, facilitating secure communication between different origins.
-        •	express: A minimalist web framework for Node.js, simplifying web application and API development by providing robust HTTP handling, routing, and middleware features.
-        •	jsonwebtoken: Facilitates generation, signing, and verification of JSON Web Tokens (JWT) in Node.js applications for secure authentication and authorization.
-      •	Navigate to ‘http://localhost:3001/cities’ to verify city data retrieval.
+## Project: City Data Retrieval and Visualization
 
-2.	Client Side (Frontend):
-    •	The client is built using Angular.
-    •	It requests data from the server and renders it for users.
-    •	The client project's structure includes:
-    •	environments: Defines environment configurations.
-    •	model: Contains data models ensuring correct data reception.
-    •	services: Defines HTTP requests for server communication. For example, the ‘/cities’ route is used to request data from the backend.
-    •	ui: Contains user interface components and views.
-    •	The Leaflet map module is used to display cities on a map. Tapping on a marker shows detailed city information.
-    •	The default route directs to the cities component on the homepage.
-    •	Token exchange occurs during backend requests for added security.
-    •	Linting methods are implemented to ensure coding best practices.
-    •	Unit tests are written to ensure app functionality.
-    •	To set up and run the client project:
-      o	npm install 
-      o	ng serve 
-    •	Navigate to ‘http://localhost:4200’ to view the data.
-    •	Run ‘ng test’ to confirm app functionality and successful test execution.
-    •	Use ‘ng lint –fix’ for linting staged files before committing to the git repository.
+This project aims to retrieve JSON data of multiple cities from a backend API and display it on a user-friendly frontend. It utilizes Express.js for the server-side and Angular for the client-side.
 
-This documentation provides an overview of the project's structure, functionality, setup instructions, and dependencies for both the server-side and client-side components.
+### Overview
 
-![image](https://github.com/ShubhamSoukiya06/OttonovaChallenge/assets/161626798/9e8dc6f1-f787-42e8-8a5a-09de47de8d47)
+- **Project Goal:** Retrieve and visualize city data.
+- **Technologies:**
+    - Server-side: Express.js
+    - Client-side: Angular
+    - Additional libraries: Leaflet (map), jsonwebtoken (authentication)
+
+### Server-Side (Backend)
+
+The server is responsible for providing JSON data containing detailed city information. It is built using Express.js and runs on port 3001.
+
+**Structure:**
+
+- `data`: Contains city data and related information.
+- `routes`: Defines routes for fetching city information, including authentication using a token-based protocol enforced in `routes.js`.
+- `server.js`: Initializes and configures the Express server.
+
+**Setup and Run:**
+
+1. Install dependencies: `npm install`
+2. Start the server: `npm start`
+
+**Dependencies:**
+
+- `cors`: Enables Cross-Origin Resource Sharing (CORS) for secure communication.
+- `express`: Node.js web framework for building APIs and web applications.
+- `jsonwebtoken`: Facilitates generation, signing, and verification of JSON Web Tokens (JWT) for secure authentication.
+
+**Testing:**
+
+Navigate to `http://localhost:3001/cities` to verify data retrieval.
+
+### Client-Side (Frontend)
+
+The client requests data from the server and renders it for users. It is built using Angular and runs on port 4200.
+
+**Structure:**
+
+- `environments`: Defines environment configurations.
+- `model`: Contains data models for accurate data reception.
+- `services`: Defines HTTP requests for server communication, including fetching city data.
+- `ui`: Contains user interface components and views.
+
+**Features:**
+
+- Leverages Leaflet map module to display cities.
+- Enables tapping on markers to reveal detailed city information.
+- Implements token exchange during backend requests for security.
+- Enforces linting methods for code quality.
+- Includes unit tests for functionality validation.
+
+**Setup and Run:**
+
+1. Install dependencies: `npm install`
+2. Start the development server: `ng serve`
+
+**Testing:**
+
+- Access the application: `http://localhost:4200`
+- Run unit tests: `ng test`
+- Ensure code quality: `ng lint --fix` (before committing changes)
+
+### Conclusion
+
+This project demonstrates city data retrieval and visualization using Express.js and Angular. It provides a solid foundation for understanding and working with server-side and client-side technologies.
