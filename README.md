@@ -2,6 +2,10 @@
 
 This project aims to retrieve JSON data of multiple cities from a backend API and display it on a user-friendly frontend. It utilizes Express.js for the server-side and Angular for the client-side.
 
+**To clone the entire project:**
+
+1. Run: `git clone recursive <repository_URL>`
+
 ### Overview
 
 - **Project Goal:** Retrieve and visualize city data.
